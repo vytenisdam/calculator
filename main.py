@@ -40,7 +40,7 @@ def calculator():
 
     continue_process = True
 
-    decision = input(f"Would you like to continue the process with the number - {first_answer}? type 'y' to continue, 'n' or 'Bye' to turn the calculator off.\n")
+    decision = input(f"Would you like to continue the process with the number - {first_answer}? type y or n.\n")
     continue_process = True
     while continue_process:
         if decision == 'n':
