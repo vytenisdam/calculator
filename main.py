@@ -40,14 +40,14 @@ def calculator():
 
     continue_process = True
 
-    decision = input(f"Would you like to continue the process with the number - {first_answer}? type y or n.\n")
+    decision = input(f"Would you like to continue the process with the number - {first_answer}? type 'y' to continue, 'n' or 'Bye' to turn the calculator off.\n")
     continue_process = True
     while continue_process:
         if decision == 'n':
             continue_process = False
             cls()
             calculator()
-        else:
+        elif decision == 'y':
             operation_symbol = input("Pick another operation: ")
             z = float(input("What's the next number?\n"))
             calculation_function = operations[operation_symbol]
@@ -55,5 +55,9 @@ def calculator():
             print(f"{first_answer} {operation_symbol} {z} = {second_answer}")
             first_answer = second_answer
             decision = input(f"Would you like to continue the process with the number - {second_answer}? type y or n.\n")
+        else:
+            continue_process = False
+            cls()
+            print('See ya later!')
         
 calculator()
