@@ -40,7 +40,7 @@ def calculator():
 
     continue_process = True
 
-    decision = input(f"Would you like to continue the process with the number - {first_answer}? type y or n.\n")
+    decision = input(f"Would you like to continue the process with the number: {first_answer}? Type 'y' to continue, 'n' to start with a new number or 'Bye' to turn the calculator off.\n")
     continue_process = True
     while continue_process:
         if decision == 'n':
@@ -54,7 +54,7 @@ def calculator():
             second_answer = float(calculation_function(first_answer, z))
             print(f"{first_answer} {operation_symbol} {z} = {second_answer}")
             first_answer = second_answer
-            decision = input(f"Would you like to continue the process with the number - {second_answer}? type y or n.\n")
+            decision = input(f"Would you like to continue the process with the number: {second_answer}? Type 'y' to continue, 'n' to start with a new number or 'Bye' to turn the calculator off.\n")
         else:
             continue_process = False
             cls()
